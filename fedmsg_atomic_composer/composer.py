@@ -173,7 +173,7 @@ class AtomicComposer(object):
         base = os.path.dirname(out)
         if not os.path.isdir(base):
             self.log.info('Creating %s', base)
-            os.makedirs(base, mode=0755)
+            os.makedirs(base, mode=0o755)
         if not os.path.isdir(out):
             self.mock_chroot(release, release['ostree_init'])
 
